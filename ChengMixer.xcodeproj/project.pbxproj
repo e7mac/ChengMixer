@@ -16,6 +16,8 @@
 		A845D0BE23353AB40024A510 /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A845D0BC23353AB40024A510 /* TrackViewController.swift */; };
 		A845D0C5233560FC0024A510 /* Tracks in Resources */ = {isa = PBXBuildFile; fileRef = A845D0C4233560FC0024A510 /* Tracks */; };
 		A845D0C7233561E20024A510 /* TrackPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A845D0C6233561E20024A510 /* TrackPickerViewController.swift */; };
+		A8C74137234588AA00BB5016 /* TracksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C74136234588AA00BB5016 /* TracksTableViewController.swift */; };
+		A8C741392345891900BB5016 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C741382345891900BB5016 /* TrackTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		A845D0BC23353AB40024A510 /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
 		A845D0C4233560FC0024A510 /* Tracks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tracks; sourceTree = "<group>"; };
 		A845D0C6233561E20024A510 /* TrackPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackPickerViewController.swift; sourceTree = "<group>"; };
+		A8C74136234588AA00BB5016 /* TracksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksTableViewController.swift; sourceTree = "<group>"; };
+		A8C741382345891900BB5016 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				A845D0A223347D4D0024A510 /* AppDelegate.swift */,
 				A845D0A423347D4D0024A510 /* SceneDelegate.swift */,
 				A845D0A623347D4D0024A510 /* ViewController.swift */,
+				A8C74136234588AA00BB5016 /* TracksTableViewController.swift */,
+				A8C741382345891900BB5016 /* TrackTableViewCell.swift */,
 				A845D0A823347D4D0024A510 /* Main.storyboard */,
 				A845D0BC23353AB40024A510 /* TrackViewController.swift */,
 				A845D0C6233561E20024A510 /* TrackPickerViewController.swift */,
@@ -149,10 +155,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A845D0BE23353AB40024A510 /* TrackViewController.swift in Sources */,
+				A8C74137234588AA00BB5016 /* TracksTableViewController.swift in Sources */,
 				A845D0A723347D4D0024A510 /* ViewController.swift in Sources */,
 				A845D0A323347D4D0024A510 /* AppDelegate.swift in Sources */,
 				A845D0C7233561E20024A510 /* TrackPickerViewController.swift in Sources */,
 				A845D0A523347D4D0024A510 /* SceneDelegate.swift in Sources */,
+				A8C741392345891900BB5016 /* TrackTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
