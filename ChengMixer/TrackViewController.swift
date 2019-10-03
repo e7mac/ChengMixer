@@ -14,7 +14,6 @@ class TrackViewController: UIViewController, TrackPickerViewControllerDelegate {
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var timelineSlider: UISlider!
     var audioPlayer: AVAudioPlayer?
-    var avPlayer: AVPlayer?
 
     @IBOutlet weak var trackNameLabel: UILabel!
     @IBOutlet weak var pickButton: UIButton!
@@ -66,10 +65,6 @@ class TrackViewController: UIViewController, TrackPickerViewControllerDelegate {
             currentPositionLabel.text = timeIntervalFormatted(audioPlayer.currentTime)
             timelineSlider.value = Float(audioPlayer.currentTime / audioPlayer.duration)
         }
-        if let currentItem = avPlayer?.currentItem {
-            currentPositionLabel.text = timeIntervalFormatted(CMTimeGetSeconds(currentItem.currentTime()))
-            timelineSlider.value = Float(CMTimeGetSeconds(currentItem.currentTime()) / CMTimeGetSeconds(currentItem.asset.duration))
-        }
     }
 
     @objc func pickPressed() {
@@ -86,15 +81,6 @@ class TrackViewController: UIViewController, TrackPickerViewControllerDelegate {
             } else {
                 audioPlayer.play()
                 startTimer()
-            }
-        }
-        if let avPlayer = avPlayer {
-            if (avPlayer.rate == 1) {
-                avPlayer.pause()
-                stopTimer()
-            } else {
-                avPlayer.play()
-                stopTimer()
             }
         }
     }
@@ -116,9 +102,6 @@ class TrackViewController: UIViewController, TrackPickerViewControllerDelegate {
         if let audioPlayer = audioPlayer {
             currentPositionLabel.text = timeIntervalFormatted( audioPlayer.duration * Double(sender.value))
         }
-        if let currentItem = avPlayer?.currentItem {
-            currentPositionLabel.text = timeIntervalFormatted( CMTimeGetSeconds(currentItem.asset.duration) * Double(sender.value))
-        }
     }
 
     @IBAction func timelineSliderTouchUp(_ sender: UISlider) {
@@ -126,8 +109,6 @@ class TrackViewController: UIViewController, TrackPickerViewControllerDelegate {
         if let audioPlayer = audioPlayer {
             audioPlayer.currentTime = audioPlayer.duration * Double(sender.value)
         }
-//        if let currentItem = avPlayer?.currentItem {
-//        }
     }
 
     func loadURL(_ url: URL) {
@@ -136,15 +117,10 @@ class TrackViewController: UIViewController, TrackPickerViewControllerDelegate {
         } catch {
             print(error)
         }
-//        avPlayer = try AVPlayer(url: url)
-        avPlayer?.play()
         audioPlayer?.play()
         trackNameLabel.text = url.lastPathComponent
         if let audioPlayer = audioPlayer {
             durationLabel.text = timeIntervalFormatted(audioPlayer.duration)
-        }
-        if let currentItem = avPlayer?.currentItem {
-            durationLabel.text = timeIntervalFormatted(CMTimeGetSeconds(currentItem.asset.duration))
         }
         audioPlayer?.numberOfLoops = -1
         loopButton.alpha = 1
@@ -159,9 +135,6 @@ class TrackViewController: UIViewController, TrackPickerViewControllerDelegate {
     @IBAction func changeVolume(_ sender: UISlider) {
         if let audioPlayer = audioPlayer {
             audioPlayer.volume = sender.value
-        }
-        if let avPlayer = avPlayer {
-            avPlayer.volume = sender.value
         }
     }
 
