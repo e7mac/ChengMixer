@@ -13,6 +13,9 @@
 		A845D0AA23347D4D0024A510 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A845D0A823347D4D0024A510 /* Main.storyboard */; };
 		A845D0AC23347D4F0024A510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A845D0AB23347D4F0024A510 /* Assets.xcassets */; };
 		A845D0AF23347D4F0024A510 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A845D0AD23347D4F0024A510 /* LaunchScreen.storyboard */; };
+		A845D0BE23353AB40024A510 /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A845D0BC23353AB40024A510 /* TrackViewController.swift */; };
+		A845D0C5233560FC0024A510 /* Tracks in Resources */ = {isa = PBXBuildFile; fileRef = A845D0C4233560FC0024A510 /* Tracks */; };
+		A845D0C7233561E20024A510 /* TrackPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A845D0C6233561E20024A510 /* TrackPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		A845D0AB23347D4F0024A510 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A845D0AE23347D4F0024A510 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A845D0B023347D4F0024A510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A845D0BC23353AB40024A510 /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
+		A845D0C4233560FC0024A510 /* Tracks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tracks; sourceTree = "<group>"; };
+		A845D0C6233561E20024A510 /* TrackPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +62,13 @@
 		A845D0A123347D4D0024A510 /* ChengMixer */ = {
 			isa = PBXGroup;
 			children = (
+				A845D0C4233560FC0024A510 /* Tracks */,
 				A845D0A223347D4D0024A510 /* AppDelegate.swift */,
 				A845D0A423347D4D0024A510 /* SceneDelegate.swift */,
 				A845D0A623347D4D0024A510 /* ViewController.swift */,
 				A845D0A823347D4D0024A510 /* Main.storyboard */,
+				A845D0BC23353AB40024A510 /* TrackViewController.swift */,
+				A845D0C6233561E20024A510 /* TrackPickerViewController.swift */,
 				A845D0AB23347D4F0024A510 /* Assets.xcassets */,
 				A845D0AD23347D4F0024A510 /* LaunchScreen.storyboard */,
 				A845D0B023347D4F0024A510 /* Info.plist */,
@@ -128,6 +137,7 @@
 				A845D0AF23347D4F0024A510 /* LaunchScreen.storyboard in Resources */,
 				A845D0AC23347D4F0024A510 /* Assets.xcassets in Resources */,
 				A845D0AA23347D4D0024A510 /* Main.storyboard in Resources */,
+				A845D0C5233560FC0024A510 /* Tracks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A845D0BE23353AB40024A510 /* TrackViewController.swift in Sources */,
 				A845D0A723347D4D0024A510 /* ViewController.swift in Sources */,
 				A845D0A323347D4D0024A510 /* AppDelegate.swift in Sources */,
+				A845D0C7233561E20024A510 /* TrackPickerViewController.swift in Sources */,
 				A845D0A523347D4D0024A510 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +299,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 232HCB982K;
 				INFOPLIST_FILE = ChengMixer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +318,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 232HCB982K;
 				INFOPLIST_FILE = ChengMixer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
